@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotiva - Software Veterinario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#F8FAFB', // Fondo claro
+                            primary: '#1FB6B2', // Teal (Botones/Accent)
+                            dark: '#0E2A3B', // Dark Blue (Textos)
+                            surface: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Efecto suave para las imágenes */
+        .feature-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark selection:bg-brand-primary selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <div class="w-9 h-9 bg-gradient-to-br from-brand-primary to-teal-600 rounded-xl flex items-center justify-center text-white font-bold shadow-md">M</div>
+                    <span class="font-bold text-xl tracking-tight text-brand-dark">Mascotiva</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                    <a href="#features" class="hover:text-brand-primary transition-colors">Funcionalidades</a>
+                    <a href="#pricing" class="hover:text-brand-primary transition-colors">Planes</a>
+                    <a href="#blog" class="hover:text-brand-primary transition-colors">Blog</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="hidden md:block text-sm font-medium text-gray-500 hover:text-brand-dark transition-colors">Iniciar sesión</a>
+                    <a href="#" class="px-6 py-2.5 rounded-full bg-brand-primary text-white font-medium hover:bg-teal-600 transition-all shadow-lg shadow-brand-primary/30 hover:shadow-brand-primary/40 transform hover:-translate-y-0.5">
+                        Prueba Gratis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-32 overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+             <div class="absolute top-20 right-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-3xl"></div>
+             <div class="absolute bottom-0 left-0 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-gray-200 shadow-sm text-brand-primary text-sm font-semibold mb-8 animate-fade-in-up">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>
+                </span>
+                #1 Software Veterinario en Chile
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight text-brand-dark">
+                Tu veterinaria, <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-teal-600">ahora más inteligente</span>
+            </h1>
+            <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-500 mb-10 leading-relaxed">
+                Centraliza citas, fichas clínicas, inventario y facturación SII en una plataforma diseñada para que recuperes tu tiempo libre.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-20">
+                <button class="px-8 py-4 rounded-xl bg-brand-primary text-white font-semibold text-lg hover:bg-teal-600 transition-all shadow-xl shadow-brand-primary/30 flex items-center justify-center gap-2 transform hover:-translate-y-1">
+                    Comenzar Ahora <i class="fas fa-arrow-right text-sm"></i>
+                </button>
+                <button class="px-8 py-4 rounded-xl bg-white text-brand-dark border border-gray-200 font-semibold text-lg hover:bg-gray-50 hover:border-brand-primary/30 transition-all flex items-center justify-center gap-2">
+                    <i class="fas fa-play text-brand-primary text-sm"></i> Ver Demo
+                </button>
+            </div>
+            
+            <!-- Hero Dashboard Mockup Placeholder -->
+            <div class="relative mx-auto max-w-6xl px-4">
+                <div class="bg-white rounded-2xl shadow-2xl border border-gray-200 aspect-[16/9] flex items-center justify-center overflow-hidden relative group">
+                    <div class="absolute top-0 left-0 right-0 h-12 bg-gray-50 border-b border-gray-100 flex items-center px-6 gap-2 z-10">
+                        <div class="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-400"></div>
+                        <div class="mx-auto bg-gray-200 h-6 w-1/2 rounded-md opacity-50 text-xs flex items-center justify-center text-gray-400">mascotiva.cl/dashboard</div>
+                    </div>
+                    
+                    <!-- Content Placeholder for Hero -->
+                    <div class="text-gray-300 flex flex-col items-center group-hover:scale-105 transition-transform duration-700">
+                        <i class="fas fa-desktop text-7xl mb-6 opacity-50"></i>
+                        <span class="text-xl font-medium">Aquí iría la vista principal del Dashboard</span>
+                        <span class="text-sm mt-2 opacity-70">(Sugerencia para futura imagen)</span>
+                    </div>
+                    
+                    <!-- Gradient overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>
+                </div>
+                <!-- Decorative blurred blobs behind dashboard -->
+                <div class="absolute -top-10 -right-10 w-96 h-96 bg-brand-primary/20 rounded-full blur-[80px] -z-10 opacity-60"></div>
+                <div class="absolute -bottom-10 -left-10 w-96 h-96 bg-purple-300/20 rounded-full blur-[80px] -z-10 opacity-60"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-12 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-10">Confían en nosotros más de 100 clínicas</p>
+            <div class="flex flex-wrap justify-center gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Logos ficticios con iconos -->
+                <div class="flex items-center gap-2 text-2xl font-bold text-gray-600 hover:text-brand-dark transition"><i class="fas fa-paw text-brand-primary"></i> VetCare</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-gray-600 hover:text-brand-dark transition"><i class="fas fa-dog text-brand-primary"></i> Dogtor</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-gray-600 hover:text-brand-dark transition"><i class="fas fa-cat text-brand-primary"></i> PetLife</div>
+                <div class="flex items-center gap-2 text-2xl font-bold text-gray-600 hover:text-brand-dark transition"><i class="fas fa-heart-pulse text-brand-primary"></i> AnimalSalud</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Grid -->
+    <section id="features" class="py-32 bg-brand-light relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-24">
+                <span class="text-brand-primary font-semibold tracking-wider uppercase text-sm">Funcionalidades</span>
+                <h2 class="text-4xl font-bold text-brand-dark mt-2 mb-6">Todo lo que necesitas para operar</h2>
+                <p class="text-gray-500 text-xl">Deja de usar Excel y papel. Mascotiva centraliza tu operación para que te enfoques en tus pacientes.</p>
+            </div>
+
+            <!-- Feature 1: Agenda Inteligente (NUEVO) -->
+            <div class="flex flex-col md:flex-row items-center gap-16 mb-32">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-2xl flex items-center justify-center text-2xl mb-8 text-blue-500">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-brand-dark">Agenda médica inteligente</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Organiza los horarios de todo tu equipo en una vista intuitiva. Filtra por especialista, sala o tipo de cita. Evita cruces de horarios y optimiza la ocupación de tus boxes.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Vistas diarias, semanales y mensuales personalizables</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Bloqueo inteligente de horarios y feriados</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1 order-1 md:order-2 group">
+                    <div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 group-hover:rotate-0 transition duration-500 feature-img">
+                         <img src="agenda.png" alt="Agenda médica veterinaria inteligente" class="w-full h-auto rounded-xl shadow-inner bg-gray-50">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Fichas Clínicas (NUEVO) -->
+            <div class="flex flex-col md:flex-row items-center gap-16 mb-32">
+                <div class="flex-1 group">
+                    <div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100 transform -rotate-1 group-hover:rotate-0 transition duration-500 feature-img">
+                        <img src="fichas.png" alt="Ficha clínica veterinaria digital" class="w-full h-auto rounded-xl shadow-inner bg-gray-50">
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-2xl flex items-center justify-center text-2xl mb-8 text-red-500">
+                        <i class="fas fa-file-medical"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-brand-dark">Fichas clínicas digitales</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Accede al historial completo de cada paciente en segundos. Registra consultas, vacunas, exámenes y tratamientos con plantillas personalizables para cada especie.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Historial médico unificado y accesible en la nube</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Adjunta archivos, PDFs y radiografías fácilmente</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 3: Recordatorios -->
+            <div class="flex flex-col md:flex-row items-center gap-16 mb-32">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-2xl flex items-center justify-center text-2xl mb-8 text-green-500">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-brand-dark">Recordatorios automáticos</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Reduce el ausentismo hasta en un 40%. Envía avisos de citas y vacunas por WhatsApp o correo sin esfuerzo manual. Tu recepcionista te lo agradecerá.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Confirmación automática por WhatsApp</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Recordatorios de vacunas anuales y desparasitaciones</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1 order-1 md:order-2 group">
+                    <div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 group-hover:rotate-0 transition duration-500 feature-img">
+                         <img src="recordatorios.png" alt="Recordatorios automáticos por WhatsApp" class="w-full h-auto rounded-xl shadow-inner bg-gray-50">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 4: Inventario -->
+            <div class="flex flex-col md:flex-row items-center gap-16 mb-32">
+                <div class="flex-1 group">
+                    <div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100 transform -rotate-1 group-hover:rotate-0 transition duration-500 feature-img">
+                        <img src="inventario.png" alt="Gestión de inventario veterinario" class="w-full h-auto rounded-xl shadow-inner bg-gray-50">
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-2xl flex items-center justify-center text-2xl mb-8 text-indigo-500">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-brand-dark">Gestión de inventario</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Controla medicamentos y productos al detalle. Recibe alertas de stock bajo y fechas de vencimiento para evitar pérdidas y quiebres de stock críticos.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Alertas de caducidad temprana</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-600">
+                            <i class="fas fa-check-circle text-brand-primary mt-1"></i>
+                            <span>Descuento automático al facturar la consulta</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 5: Reportes -->
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="flex-1 order-2 md:order-1">
+                    <div class="w-14 h-14 bg-white shadow-lg rounded-2xl flex items-center justify-center text-2xl mb-8 text-purple-500">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4 text-brand-dark">Reportes y métricas</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        No manejes tu clínica a ciegas. Visualiza ingresos diarios, citas atendidas y el rendimiento de cada veterinario para tomar decisiones basadas en datos reales.
+                    </p>
+                    <a href="#" class="inline-flex items-center text-brand-primary font-bold hover:underline">
+                        Ver ejemplo de reporte <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                <div class="flex-1 order-1 md:order-2 group">
+                    <div class="bg-white p-3 rounded-2xl shadow-xl border border-gray-100 transform rotate-1 group-hover:rotate-0 transition duration-500 feature-img">
+                        <img src="reportes.png" alt="Dashboard de métricas veterinarias" class="w-full h-auto rounded-xl shadow-inner bg-gray-50">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Specific for Chile / SII -->
+    <section class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#1FB6B2 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-brand-primary/10 to-transparent"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-block p-3 rounded-full bg-white/10 mb-6 backdrop-blur-sm">
+                <i class="fas fa-shield-alt text-3xl text-brand-primary"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Tranquilidad total con el SII</h2>
+            <p class="text-gray-300 text-xl mb-10 leading-relaxed">
+                Olvídate de subir boletas manuales por la noche. Mascotiva se conecta directamente con el SII para emitir boletas electrónicas automáticamente tras cada pago.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="bg-white/5 px-8 py-4 rounded-xl backdrop-blur-sm border border-white/10 flex items-center gap-3 hover:bg-white/10 transition">
+                    <i class="fas fa-file-invoice-dollar text-brand-primary text-xl"></i> 
+                    <span class="font-medium">Facturación Electrónica</span>
+                </div>
+                <div class="bg-white/5 px-8 py-4 rounded-xl backdrop-blur-sm border border-white/10 flex items-center gap-3 hover:bg-white/10 transition">
+                    <i class="fas fa-lock text-brand-primary text-xl"></i> 
+                    <span class="font-medium">Datos Encriptados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="py-24 bg-white text-center">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-brand-dark mb-6">¿Listo para modernizar tu veterinaria?</h2>
+            <p class="text-gray-500 text-lg mb-10">Únete a los veterinarios que ya están recuperando su tiempo libre.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="px-10 py-4 rounded-xl bg-brand-primary text-white font-bold text-lg hover:bg-teal-600 transition shadow-lg shadow-brand-primary/30">
+                    Prueba Gratis 14 Días
+                </button>
+                <button class="px-10 py-4 rounded-xl bg-gray-100 text-gray-700 font-bold text-lg hover:bg-gray-200 transition">
+                    Agendar Demo
+                </button>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">Sin tarjeta de crédito requerida • Cancela cuando quieras</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center text-white font-bold">M</div>
+                        <span class="font-bold text-xl text-brand-dark">Mascotiva</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        La plataforma todo en uno para clínicas veterinarias en Chile. Simplificamos tu gestión para que cuides lo que importa.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-brand-primary transition"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brand-primary transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brand-primary transition"><i class="fab fa-facebook text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-6">Producto</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-primary transition">Funcionalidades</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">Precios</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">Integración SII</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">App Móvil</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-6">Recursos</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-primary transition">Blog Veterinario</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">Casos de Éxito</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">Centro de Ayuda</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">Comunidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark mb-6">Legal</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-primary transition">Privacidad</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">Términos de Uso</a></li>
+                        <li><a href="#" class="hover:text-brand-primary transition">Seguridad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-gray-200 text-sm text-gray-400">
+                &copy; 2026 Mascotiva SpA. Hecho en Chile.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
